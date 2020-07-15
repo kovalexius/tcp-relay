@@ -7,11 +7,30 @@
     <artifactId>tcp-relay</artifactId>
     <version>1.0</version>
   </parent>
+
   <groupId>ru.atc.mvd.sudis</groupId>
   <artifactId>skeleton</artifactId>
   <version>1.0</version>
   <name>skeleton</name>
   <url>http://maven.apache.org</url>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>ru.atc.mvd.sudis.skeleton.Skeleton</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -26,4 +45,5 @@
       <scope>compile</scope>
     </dependency>
   </dependencies>
+
 </project>
